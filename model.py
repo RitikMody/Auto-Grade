@@ -6,11 +6,11 @@ from PIL import Image
 import numpy as np
 
 from keras.models import load_model
-model = load_model('./cnn (1).h5')
+model = load_model('./Model/cnn.h5')
 
 def get_answers(file):
   # pages = convert_from_path(file)
-  pages = convert_from_path('../Data/test-multipage.pdf')
+  pages = convert_from_path('./User/test-multipage.pdf')
   answers = []
   for page in pages:
       page.save('out.jpg', 'JPEG')
@@ -66,7 +66,5 @@ def get_answers(file):
         page_answers.append(np.argmax(out[0][1:5])+1)
       answers.extend(page_answers[::-1])
   return answers
-
-print(get_answers("../Data/test-multipage.pdf"))
 
 # [2, 1, 3, 4, 3, 4, 1, 1, 1, 2, 3, 2, 2, 3, 3]
