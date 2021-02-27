@@ -1,34 +1,15 @@
 import numpy as np
 import pandas as pd
 
-def calc_correct_responses():
-    df['Status'] = np.where(df["correct_answer"] == df["Predictions"], True, False)
-    correct = df.Status.sum()
-    incorrect = df.shape[0] - correct
-    return correct, incorrect
+def calc_correct_responses(df):
+    return len(df), len(df[df.correct_answer == df.student_answer]), len(df[df.correct_answer != df.student_answer])
 
-def calc_score_for_topic():
+def calc_score_for_topic(df):
     topics = df['topic'].unique()
-    topic_scores = {}
+    topic_scores = []
     for topic in topics:
-        dt = df[df['topic'] == topic]
-        topic_scores[topic] = [dt.Status.sum(), dt.shape[0]]
+        topic_df = df[df.topic == topic]
+        # list of topic, correct, wrong, total answers in topic
+        topic_scores.append([topic, len(topic_df[topic_df.correct_answer == topic_df.student_answer]), len(topic_df[topic_df.correct_answer != topic_df.student_answer]), len(topic_df)])
+        print(topic_scores)
     return topic_scores
-
-def percentage(correct):
-    percent = np.round((correct/df.shape[0])*100, 2)
-    return percent
-
-def percentage_for_topic(topic_scores):
-    percentage_topic = {}
-    for topic in topic_scores:
-        percentage_topic[topic] = np.round((topic_scores[topic][0]/topic_scores[topic][1])*100, 2)
-    return percentage_topic
-
-df = pd.read_csv('Data\\answers-multipage.csv')
-df['Predictions'] = [2,1,3,4,3,4,1,1,1,2,3,2,2,3,4]
-correct, incorrect = calc_correct_responses()
-topic_scores = calc_score_for_topic()
-percent = percentage(correct)
-percentage_topic = percentage_for_topic(topic_scores)
-

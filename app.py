@@ -1,7 +1,7 @@
 from flask import Flask , render_template, redirect
 import flask
 import pandas as pd
-from model import get_answers
+import model
 import report
 
 app = Flask(__name__)
@@ -18,7 +18,7 @@ def upload_file():
 			uploaded_file.save(f"./User/{uploaded_file.filename}")
 
 	answer_key = pd.read_csv("./User/answers-multipage.csv")
-	answered = get_answers("./User/test-multipage.pdf")
+	answered = model.get_answers("./User/test-multipage.pdf")
 	answer_key["student_answer"] = pd.Series(answered)
 	print(answer_key.head(), answer_key.columns)
 	# answer_key.to_csv("./Data/corrected_sheet.csv")
@@ -28,6 +28,13 @@ def upload_file():
 def results():
 	correct, incorrect = report.calc_correct_responses()
 	return render_template('report.html', correct = correct, incorrect = incorrect)
+
+@app.route('/temp')
+def stats():
+	df = pd.read_csv("./Data/corrected_sheet.csv")
+	num_total, num_correct, num_incorrect = report.calc_correct_responses(df)
+	topic_scores = report.calc_score_for_topic(df)
+	return render_template('report.html', num_total = num_total, num_correct = num_correct, num_incorrect = num_incorrect, topic_scores = topic_scores)
 
 if __name__ == '__main__':
    app.run(debug=True)

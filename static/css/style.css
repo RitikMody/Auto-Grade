@@ -901,7 +901,8 @@ section {
 --------------------------------------------------------------*/
 .contact .info {
   padding: 20px 40px;
-  background: #f1f3f6;
+  background: #fff !important;
+  background-color: #fff !important;
   color: #47536e;
   text-align: center;
   border: 1px solid #fff;
