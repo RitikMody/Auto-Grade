@@ -57,18 +57,14 @@
                 <h2>Lorem ipsum dolor sit amet, tota senserit percipitur ius ut, usu et fastidii forensibus voluptatibus. His ei nihil feugait</h2>
               </div>
               <div class="uploader">
-                  <form action="">
+                  <form action="/report" method = "post" enctype="multipart/form-data">
                     <label for="">Upload your answer sheet</label>
                     <label for="file-upload" class="custom-file-upload">
                         <i class="fa fa-cloud-upload" style="margin-right: 1rem;"></i>Upload
                     </label>
-                    <input id="file-upload" type="file"/><br>
-                    <label for="" style="margin-right: 2px;">Upload your grades sheet</label>
-                    <label for="file-upload" class="custom-file-upload">
-                        <i class="fa fa-cloud-upload" style="margin-right: 1rem;"></i>Upload
-                    </label>
-                    <input id="file-upload" type="file"/><br>
-                    <button type="submit" class="submit-button">Submit</button>
+                    <input id="file-upload" type="file" name="file[]" multiple=""/><br>
+                    <!-- <button type="submit" class="submit-button">Submit</button> -->
+                    <input type = "submit" value="Upload">  
                   </form>
               </div>
             </div>
@@ -77,7 +73,6 @@
             </div>
           </div>
         </div>
-    
       </section>
       <footer id="footer">
         <div class="container py-3 copyright">

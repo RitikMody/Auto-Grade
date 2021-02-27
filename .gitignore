@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 out.jpg
+cnn.h5
+User
+workspace.code-workspace
 
 # C extensions
 *.so

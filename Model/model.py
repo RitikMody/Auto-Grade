@@ -6,7 +6,7 @@ from PIL import Image
 import numpy as np
 
 from keras.models import load_model
-model = load_model('./cnn.h5')
+model = load_model('./cnn (1).h5')
 
 def get_answers(file):
   # pages = convert_from_path(file)
@@ -68,3 +68,5 @@ def get_answers(file):
   return answers
 
 print(get_answers("../Data/test-multipage.pdf"))
+
+# [2, 1, 3, 4, 3, 4, 1, 1, 1, 2, 3, 2, 2, 3, 3]
