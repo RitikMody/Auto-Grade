@@ -33,7 +33,7 @@
 
     <body>
     <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top  header-transparent ">
+    <!-- <header id="header" class="fixed-top  header-transparent ">
     <div class="container d-flex align-items-center">
 
     <div class="logo mr-auto">
@@ -45,7 +45,7 @@
     </ul>
     </nav>
     </div>
-    </header>
+    </header> -->
 
     <section id="hero" class="d-flex align-items-center">
 
@@ -58,13 +58,14 @@
               </div>
               <div class="uploader">
                   <form action="/report" method = "post" enctype="multipart/form-data">
-                    <label for="">Upload your answer sheet</label>
-                    <label for="file-upload" class="custom-file-upload">
-                        <i class="fa fa-cloud-upload" style="margin-right: 1rem;"></i>Upload
-                    </label>
+                    <label for="">Upload an answer key along with the scanned file containing your work, and we'll do the rest!</label>
                     <input id="file-upload" type="file" name="file[]" multiple=""/><br>
                     <!-- <button type="submit" class="submit-button">Submit</button> -->
-                    <input type = "submit" value="Upload">  
+                    <label for="file-upload" class="custom-file-upload">
+                      <i class="fa fa-cloud-upload" style="margin-right: 1rem;"></i>
+                      Upload
+                    </label>
+                    <input type = "submit" value = "Submit" class = "custom-file-upload">  
                   </form>
               </div>
             </div>
