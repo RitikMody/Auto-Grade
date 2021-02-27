@@ -2,6 +2,7 @@ from flask import Flask , render_template, redirect
 import flask
 import pandas as pd
 from model import get_answers
+import report
 
 app = Flask(__name__)
 
@@ -21,6 +22,11 @@ def upload_file():
 	answer_key["student_answer"] = pd.Series(answered)
 	print(answer_key.head(), answer_key.columns)
 	return ""
+
+@app.route('/results')
+def results():
+	correct, incorrect = report.calc_correct_responses()
+	return render_template('report.html', correct = correct, incorrect = incorrect)
 
 if __name__ == '__main__':
    app.run(debug=True)

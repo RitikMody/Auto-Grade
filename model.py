@@ -6,7 +6,7 @@ from PIL import Image
 import numpy as np
 
 from keras.models import load_model
-model = load_model('./Model/cnn.h5')
+model = load_model('./Model/cnn5.h5')
 
 def get_answers(file):
   # pages = convert_from_path(file)
