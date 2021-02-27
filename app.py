@@ -20,6 +20,7 @@ def upload_file():
 	answered = get_answers("./User/test-multipage.pdf")
 	answer_key["student_answer"] = pd.Series(answered)
 	print(answer_key.head(), answer_key.columns)
+	# answer_key.to_csv("./Data/corrected_sheet.csv")
 	return ""
 
 if __name__ == '__main__':
