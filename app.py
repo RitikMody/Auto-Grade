@@ -17,8 +17,8 @@ def upload_file():
 		if uploaded_file.filename != '':
 			uploaded_file.save(f"./User/{uploaded_file.filename}")
 
-	df = pd.read_csv("./User/answers-multipage.csv")
-	answered = model.get_answers("./User/test-multipage.pdf")
+	df = pd.read_csv("./Users/answers-multipage.csv")
+	answered = model.get_answers("./Users/test-multipage.pdf")
 	df["student_answer"] = pd.Series(answered)
 	print(df.head(), df.columns)
 	# df = pd.read_csv("./Data/corrected_sheet.csv")
