@@ -10,7 +10,7 @@ model = load_model('./Model/cnn5.h5')
 
 def get_answers(file):
   # pages = convert_from_path(file)
-  pages = convert_from_path('./User/test-multipage.pdf')
+  pages = convert_from_path(file)
   answers = []
   for page in pages:
       page.save('out.jpg', 'JPEG')
