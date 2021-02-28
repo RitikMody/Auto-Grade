@@ -15,7 +15,7 @@ def upload_file():
 	uploaded_files = flask.request.files.getlist("file[]")
 	for uploaded_file in uploaded_files:
 		if uploaded_file.filename != '':
-			uploaded_file.save(f"./User/{uploaded_file.filename}")
+			uploaded_file.save(f"./Users/{uploaded_file.filename}")
 
 	df = pd.read_csv("./Users/answers-multipage.csv")
 	answered = model.get_answers("./Users/test-multipage.pdf")
