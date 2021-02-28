@@ -382,12 +382,9 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
 }
 
-#hero .custom-file-upload{
-  margin-left: 15px;
-}
-
 #hero .submit-button{
   padding: 10px 25px;
+  margin-left: 15px;
 }
 
 #hero .submit-button:hover {
