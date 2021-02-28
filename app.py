@@ -22,8 +22,8 @@ def upload_file():
 			if uploaded_file.filename.endswith('.csv'):
 				answer_key_name = uploaded_file.filename
 
-	df = pd.read_csv(f"/Users/{answer_key_name}")
-	answered = model.get_answers(f"/Users/{test_paper_name}")
+	df = pd.read_csv(f"Users/{answer_key_name}")
+	answered = model.get_answers(f"Users/{test_paper_name}")
 	df["student_answer"] = pd.Series(answered)
 	print(df.head(), df.columns)
 	# df = pd.read_csv("./Data/corrected_sheet.csv")
