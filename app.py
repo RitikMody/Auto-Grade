@@ -16,14 +16,14 @@ def upload_file():
 	uploaded_files = flask.request.files.getlist("file[]")
 	for uploaded_file in uploaded_files:
 		if uploaded_file.filename != '':
-			uploaded_file.save(f"./Users/{uploaded_file.filename}")
+			uploaded_file.save(f"./User/{uploaded_file.filename}")
 			if uploaded_file.filename.endswith('.pdf'):
 				test_paper_name = uploaded_file.filename
 			if uploaded_file.filename.endswith('.csv'):
 				answer_key_name = uploaded_file.filename
 
-	df = pd.read_csv(f"./Users/{answer_key_name}")
-	answered = model.get_answers(f"./Users/{test_paper_name}")
+	df = pd.read_csv(f"./User/{answer_key_name}")
+	answered = model.get_answers(f"./User/{test_paper_name}")
 	df["student_answer"] = pd.Series(answered)
 	print(df.head(), df.columns)
 	# df = pd.read_csv("./Data/corrected_sheet.csv")
