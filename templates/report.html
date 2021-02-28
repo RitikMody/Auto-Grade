@@ -93,7 +93,7 @@
 					<h2>Incorrectly Answered Questions</h2>
 				</div>
 				<div class="accordion-list">
-          {% for i in length %}
+          {% for i in range(length) %}
 					<ul>
 						<li data-aos="fade-up">
 							<i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#accordion-list-{{ i }}">Question - {{ question[i] }}<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
