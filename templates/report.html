@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Auto Grade - Index</title>
+	<title>Auto Grade - Report</title>
 	<meta content="" name="description">
 	<meta content="" name="keywords">
 	<!-- Google Fonts -->
@@ -93,7 +93,7 @@
 					<h2>Incorrectly Answered Questions</h2>
 				</div>
 				<div class="accordion-list">
-          {% for i in length %}
+          	{% for i in length %}
 					<ul>
 						<li data-aos="fade-up">
 							<i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#accordion-list-{{ i }}">Question - {{ question[i] }}<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
