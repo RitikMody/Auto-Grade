@@ -5,7 +5,7 @@ import model
 import os
 import report
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route('/')
 def home():
@@ -35,5 +35,5 @@ def upload_file():
 	return render_template('report.html', num_total = num_total, num_correct = num_correct, num_incorrect = num_incorrect, topic_scores = topic_scores,
 							question = incorrect_question['question'], answer = incorrect_question['correct_answer'], length = incorrect_question.shape[0])
 
-if _name_ == '_main_':
+if __name__ == '__main__':
    app.run(debug=True)
