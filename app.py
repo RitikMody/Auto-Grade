@@ -24,7 +24,9 @@ def upload_file():
 	# df = pd.read_csv("./Data/corrected_sheet.csv")
 	num_total, num_correct, num_incorrect = report.calc_correct_responses(df)
 	topic_scores = report.calc_score_for_topic(df)
-	return render_template('report.html', num_total = num_total, num_correct = num_correct, num_incorrect = num_incorrect, topic_scores = topic_scores)
+	incorrect_question = report.incorrct_question(df)
+	return render_template('report.html', num_total = num_total, num_correct = num_correct, num_incorrect = num_incorrect, topic_scores = topic_scores,
+							question = incorrect_question['question'], answer = incorrect_question['correct_answer'], length = incorrect_question.shape[0])
 
 if __name__ == '__main__':
    app.run(debug=True)

@@ -13,3 +13,7 @@ def calc_score_for_topic(df):
         topic_scores.append([topic, len(topic_df[topic_df.correct_answer == topic_df.student_answer]), len(topic_df[topic_df.correct_answer != topic_df.student_answer]), len(topic_df)])
         print(topic_scores)
     return topic_scores
+
+def incorrct_question(df):
+    incorrect_questios = df[df.correct_answer != df.student_answer]
+    return incorrect_questios

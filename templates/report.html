@@ -86,30 +86,24 @@
 					</div>
 				</div>
 			</div>
-		</section><!-- End Pricing Section -->
+		</section>
 		<section id="faq" class="faq section-bg">
 			<div class="container">
 				<div class="section-title">
 					<h2>Incorrectly Answered Questions</h2>
 				</div>
 				<div class="accordion-list">
+          {% for i in length %}
 					<ul>
 						<li data-aos="fade-up">
-							<i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#accordion-list-1">Question 1 - lorem Ipsum<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-							<div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
+							<i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#accordion-list-{{ i }}">Question - {{ question[i] }}<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+							<div id="accordion-list-{{ i }}" class="collapse show" data-parent=".accordion-list">
 								<p>
-									Correct Answer - 1(lorem ipsum)
+									Correct Answer - {{ answer[i] }}
 								</p>
 							</div>
 						</li>
-						<li data-aos="fade-up">
-							<i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#accordion-list-2">Question 2 - lorem Ipsum<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-							<div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
-								<p>
-									Correct Answer - 1(lorem ipsum)
-								</p>
-							</div>
-						</li>
+            {% endfor %}
 					</ul>
 				</div>
 			</div>

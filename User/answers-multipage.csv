@@ -1,16 +1,16 @@
-question_number,correct_answer,topic
-1,2,Object Oriented Programming
-2,1,Object Oriented Programming
-3,3,Object Oriented Programming
-4,4,Object Oriented Programming
-5,3,Object Oriented Programming
-6,4,Operating Systems
-7,1,Operating Systems
-8,1,Operating Systems
-9,1,Operating Systems
-10,2,Operating Systems
-11,3,Database Management
-12,2,Database Management
-13,2,Database Management
-14,3,Database Management
-15,3,Database Management
+question_number,correct_answer,topic,question
+1,2,Object Oriented Programming,What should the return type of method where there is no return value?
+2,1,Object Oriented Programming,What data structure should be used when number of elements is fixed?
+3,3,Object Oriented Programming,What causes the program to exit abruptly and hence its usage should be minimalistic?
+4,4,Object Oriented Programming,Which one of the following causes memory leak?
+5,3,Object Oriented Programming,Which of the below is true about java class structure?
+6,4,Operating Systems,Which of the following condition is required for a deadlock to be possible?
+7,1,Operating Systems,Which scheduling algorithm allocates the CPU first to the process that requests the CPU first?
+8,1,Operating Systems,What is the ready state of a process?
+9,1,Operating Systems,When will file system fragmentation occur?
+10,2,Operating Systems,What are the common security threats?
+11,3,Database Management,Which one of the following is a set of one or more attributes taken collectively to uniquely identify a record?
+12,2,Database Management,’_ _ _’ matches any string of ______ three characters. ’_ _ _ %’ matches any string of at ______ three characters.
+13,2,Database Management,"The attribute name could be structured as an attribute consisting of first name, middle initial, and last name. This type of attribute is called"
+14,3,Database Management,Entity is a _________
+15,3,Database Management,Which is a bottom-up approach to database design that design by examining the relationship between attributes:
