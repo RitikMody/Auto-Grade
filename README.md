@@ -1,7 +1,7 @@
 # Auto-Grade
 [![](https://img.shields.io/badge/Made_with-Python3-blue?style=for-the-badge&logo=python)]()
 [![](https://img.shields.io/badge/Made_with-Flask-red?style=for-the-badge&logo=Flask)](https://flask.palletsprojects.com/en/1.1.x/)
-[![](https://img.shields.io/badge/Made_with-Tensorfolw-green?style=for-the-badge&logo=Tensorflow)](https://www.tensorflow.org/)
+[![](https://img.shields.io/badge/Made_with-Keras-green?style=for-the-badge&logo=Keras)]()
 
 Converting handwritten answers to text using Handwriting recognition technique and grading them accordingly.
 
