@@ -25,3 +25,6 @@ Architecture:
  
 ![Rectangle Detection](rectangle.PNG)
 
+# To run files on the website check out the format or use :
+Data/answers-multipage.csv
+Data/answers-multipage.pdf
